@@ -54,3 +54,16 @@ a {
   text-decoration: none;
   color: unset;
 }
+
+
+
+
+.clock-timer{
+  height: 250px;
+}
+
+.clock-timer img{
+  height: 70%;
+  width: 70%;
+  object-fit: contain;
+}

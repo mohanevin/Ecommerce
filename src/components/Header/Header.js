@@ -38,7 +38,7 @@ const Header = () => {
                         </div>
                         <div className='nav-icons'>
                             <span className='fav-icon'><i className="ri-heart-fill"></i><Badge
-                                color="primary"
+                                color="dark"
                                 pill
                             >
                                 1
