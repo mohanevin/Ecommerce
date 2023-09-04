@@ -2,10 +2,23 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Container, Row, Badge } from 'reactstrap'
 import './header.css'
+import { useEffect } from 'react'
 
 const Header = () => {
+
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+    const isSticky = (e) => {
+        const header = document.querySelector('.header-section');
+        const scrollTop = window.scrollY;
+        scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+    };
     return (
-        <header className='header'>
+        <header className='header header-section' >
             <Container>
                 <Row>
                     <div className='nav__wrapper'>

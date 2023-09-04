@@ -1,0 +1,23 @@
+.footer{
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.brand-name
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quick-links
+{
+    margin: 20px;
+}
+
+li{
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
