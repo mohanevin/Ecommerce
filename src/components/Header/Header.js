@@ -16,7 +16,7 @@ const Header = () => {
     const isSticky = (e) => {
         const header = document.querySelector('.header-section');
         const scrollTop = window.scrollY;
-        scrollTop >= 100 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+        scrollTop >= 5 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
     };
     return (
         <header className='header header-section' >
@@ -51,12 +51,6 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className='nav-icons'>
-                            <span className='fav-icon'><i className="ri-heart-fill"></i><Badge
-                                color="dark"
-                                pill
-                            >
-                                1
-                            </Badge></span>
                             <span className='cart__icon'><i className="ri-shopping-cart-fill"></i>
                                 <Badge
                                     color="dark"

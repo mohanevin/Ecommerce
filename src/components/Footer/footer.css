@@ -16,8 +16,16 @@
 
 li{
     margin: 10px 0;
+    font-weight: 400;
 }
 
 p{
     margin: 10px 0;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+p i{
+    margin-right: 10px;
 }

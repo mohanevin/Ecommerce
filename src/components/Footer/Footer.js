@@ -28,7 +28,8 @@ const Footer = () => {
           <Col md='4' lg='4'className='mt-3'>
             <h4>Contact Us</h4>
             <p>
-            Shopify Private Limited,
+            <i class="ri-map-pin-line"></i>
+             Shopify Private Limited,
 
             Buildings Alyssa, Begonia &
 

@@ -37,15 +37,6 @@ const Shop = () => {
                 </select>
             </div>
           </Col>
-          <Col lg="3" md="3">
-          <div className='filter-widget'>
-            <select>
-              <option>sort by category</option>
-              <option value="ascending">Ascending</option>
-              <option value="descending">Descending</option>
-            </select>
-            </div>
-          </Col>
           <Col lg="6" md="6">
             <div className='search-box'>
               <input type='search' placeholder='search....' onChange={handleChange}/>

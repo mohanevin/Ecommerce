@@ -30,7 +30,7 @@ import productImg25 from "../images/wireless-03.png";
 
 const products = [
   {
-    id: "01",
+    id: "1",
     productName: "Stone and Beam Westview ",
     imgUrl: productImg01,
     category: "sofa",
@@ -49,7 +49,7 @@ const products = [
   },
 
   {
-    id: "02",
+    id: "2",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
     category: "sofa",
@@ -72,7 +72,7 @@ const products = [
   },
 
   {
-    id: "03",
+    id: "3",
     productName: "Amazon Brand Modern Sofa",
     imgUrl: productImg03,
     category: "sofa",
@@ -116,7 +116,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "04",
+    id: "4",
     productName: "Fllufy Sheep Sofa",
     imgUrl: productImg04,
     category: "sofa",
@@ -139,7 +139,7 @@ const products = [
   },
 
   {
-    id: "05",
+    id: "5",
     productName: "Faux Velvet Sofa",
     imgUrl: productImg05,
     category: "sofa",
@@ -162,7 +162,7 @@ const products = [
   },
 
   {
-    id: "06",
+    id: "6",
     productName: "Fllufy Sheep Sofa",
     imgUrl: productImg06,
     category: "sofa",
@@ -184,7 +184,7 @@ const products = [
     avgRating: 4.7,
   },
   {
-    id: "07",
+    id: "7",
     productName: "Sakarias Armchair",
     imgUrl: productImg07,
     category: "chair",
@@ -230,7 +230,7 @@ const products = [
   },
 
   {
-    id: "08",
+    id: "8",
     productName: "Baltsar Chair",
     imgUrl: productImg08,
     category: "chair",
@@ -253,7 +253,7 @@ const products = [
   },
 
   {
-    id: "09",
+    id: "9",
     productName: "Helmar Chair",
     imgUrl: productImg09,
     category: "chair",
