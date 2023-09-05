@@ -1,0 +1,37 @@
+.shop-section{
+    margin: 50px;
+}
+
+.filter-widget select{
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-widget select option{
+    font-size: 0.9rem;
+}
+
+.search-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+
+.search-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+
+}

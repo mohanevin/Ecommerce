@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { Container, Row, Badge } from 'reactstrap'
 import './header.css'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
-
+    const totalQuantity=useSelector((store)=>store.cart.totalQuantity)
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
@@ -15,7 +16,7 @@ const Header = () => {
     const isSticky = (e) => {
         const header = document.querySelector('.header-section');
         const scrollTop = window.scrollY;
-        scrollTop >= 150 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+        scrollTop >= 100 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
     };
     return (
         <header className='header header-section' >
@@ -61,7 +62,7 @@ const Header = () => {
                                     color="dark"
                                     pill
                                 >
-                                    1
+                                    {totalQuantity}
                                 </Badge></span>
                             <span><img src='https://www.pngmart.com/files/21/Account-User-PNG.png' alt='profile' /></span>
                         </div>

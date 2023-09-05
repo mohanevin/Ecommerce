@@ -1,0 +1,16 @@
+.common-section{
+    background: linear-gradient(#00000085,#0000008e),url('../assets/images/abstract-blur-defocused-shopping-mall\ -\ Copy.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.common-section h1{
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+
+}

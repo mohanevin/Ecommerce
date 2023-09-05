@@ -4,8 +4,22 @@ import { Col,CardImg } from 'reactstrap'
 import '../styles/productcard.css'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useDispatch } from 'react-redux'
+import { addCartItem } from '../redux/slice/cartSlice'
+import { toast } from 'react-toastify'
 
 const ProductCard = ({product}) => {
+  const dispatch=useDispatch();
+  const additem=()=>{
+    dispatch(addCartItem({
+      id:product.id,
+      productName:product.productName,
+      image:product.imgUrl,
+      price:product.price
+    }))
+    toast.success("Product added successfully!!")
+  }
+
   return (
     <Col lg='3' md='3'> 
         <div className='product-item' >
@@ -18,7 +32,7 @@ const ProductCard = ({product}) => {
             </div>
             <div className='product_bottom d-flex align-items-center justify-content-between p-2'>
                  <span>Price ${product.price}</span>
-                 <motion.span whileTap={{scale:1.1}}><i class="ri-add-line"></i></motion.span>
+                 <motion.span whileTap={{scale:1.1}} onClick={additem}><i class="ri-add-line"></i></motion.span>
             </div>
         </div>
     </Col>
