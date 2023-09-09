@@ -1,0 +1,11 @@
+.product-image{
+    height: 50px !important;
+    width: 50px !important;
+}
+.btn-item{
+    background: var(--primary-color);
+    color: #fff;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}

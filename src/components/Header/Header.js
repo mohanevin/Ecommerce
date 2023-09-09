@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink,useNavigate } from 'react-router-dom'
 import { Container, Row, Badge } from 'reactstrap'
 import './header.css'
 import { useEffect } from 'react'
@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 
 const Header = () => {
     const totalQuantity=useSelector((store)=>store.cart.totalQuantity)
+    const navigate=useNavigate()
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
@@ -51,7 +52,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className='nav-icons'>
-                            <span className='cart__icon'><i className="ri-shopping-cart-fill"></i>
+                            <span className='cart__icon' onClick={()=>navigate('/cart')}><i className="ri-shopping-cart-fill"></i>
                                 <Badge
                                     color="dark"
                                     pill
