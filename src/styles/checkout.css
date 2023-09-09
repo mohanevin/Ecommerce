@@ -1,0 +1,18 @@
+.checkout-section
+{
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.checkout-section h6{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.checkout-section h6 span{
+    text-align: right;
+}
