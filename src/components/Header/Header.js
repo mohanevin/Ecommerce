@@ -1,13 +1,20 @@
 import React from 'react'
-import { NavLink,useNavigate } from 'react-router-dom'
+import { Link, NavLink,useNavigate } from 'react-router-dom'
 import { Container, Row, Badge } from 'reactstrap'
 import './header.css'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useAuth } from '../../custom-hooks/useAuth'
+import userIcon from '../../assets/images/user-icon.png'
+import {signOut} from 'firebase/auth'
+import {auth} from '../../firebase.config'
+import { toast } from 'react-toastify'
 
 const Header = () => {
     const totalQuantity=useSelector((store)=>store.cart.totalQuantity)
     const navigate=useNavigate()
+    const {currentUser}=useAuth()
+    
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
@@ -19,6 +26,14 @@ const Header = () => {
         const scrollTop = window.scrollY;
         scrollTop >= 5 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
     };
+
+    const logout=()=>{
+        signOut(auth).then(()=>{
+            toast.success("logged out successfully")
+        }).catch((error)=>{
+            toast.error(error.message)
+        })
+    }
     return (
         <header className='header header-section' >
             <Container>
@@ -59,7 +74,8 @@ const Header = () => {
                                 >
                                     {totalQuantity}
                                 </Badge></span>
-                            <span><img src='https://www.pngmart.com/files/21/Account-User-PNG.png' alt='profile' /></span>
+                            <span><img src={currentUser?currentUser.photoURL:userIcon} alt='profile' /></span>
+                            {currentUser? <span style={{cursor:'pointer'}} onClick={logout}><h5>Logout</h5></span>:<span style={{cursor:'pointer'}} ><h5><Link to='/login'>Login</Link></h5></span>}
                         </div>
                     </div>
                 </Row>
